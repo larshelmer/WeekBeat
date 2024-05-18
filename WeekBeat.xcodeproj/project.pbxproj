@@ -45,6 +45,7 @@
 		AF1711E42BF8EF0D00E55C31 /* WeekBeatUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WeekBeatUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF1711E82BF8EF0D00E55C31 /* WeekBeatUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekBeatUITests.swift; sourceTree = "<group>"; };
 		AF1711EA2BF8EF0D00E55C31 /* WeekBeatUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekBeatUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		AF1711F72BF947EF00E55C31 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +76,7 @@
 		AF1711BE2BF8EF0800E55C31 = {
 			isa = PBXGroup;
 			children = (
+				AF1711F72BF947EF00E55C31 /* README.md */,
 				AF1711C92BF8EF0800E55C31 /* WeekBeat */,
 				AF1711DD2BF8EF0D00E55C31 /* WeekBeatTests */,
 				AF1711E72BF8EF0D00E55C31 /* WeekBeatUITests */,

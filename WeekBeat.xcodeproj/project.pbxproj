@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AF1711CB2BF8EF0800E55C31 /* WeekBeatApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1711CA2BF8EF0800E55C31 /* WeekBeatApp.swift */; };
-		AF1711CD2BF8EF0800E55C31 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1711CC2BF8EF0800E55C31 /* ContentView.swift */; };
 		AF1711CF2BF8EF0800E55C31 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF1711CE2BF8EF0800E55C31 /* Item.swift */; };
 		AF1711D12BF8EF0C00E55C31 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF1711D02BF8EF0C00E55C31 /* Assets.xcassets */; };
 		AF1711D42BF8EF0C00E55C31 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF1711D32BF8EF0C00E55C31 /* Preview Assets.xcassets */; };
@@ -37,7 +36,6 @@
 /* Begin PBXFileReference section */
 		AF1711C72BF8EF0800E55C31 /* WeekBeat.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeekBeat.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF1711CA2BF8EF0800E55C31 /* WeekBeatApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekBeatApp.swift; sourceTree = "<group>"; };
-		AF1711CC2BF8EF0800E55C31 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		AF1711CE2BF8EF0800E55C31 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		AF1711D02BF8EF0C00E55C31 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AF1711D32BF8EF0C00E55C31 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -98,7 +96,6 @@
 			isa = PBXGroup;
 			children = (
 				AF1711CA2BF8EF0800E55C31 /* WeekBeatApp.swift */,
-				AF1711CC2BF8EF0800E55C31 /* ContentView.swift */,
 				AF1711CE2BF8EF0800E55C31 /* Item.swift */,
 				AF1711D02BF8EF0C00E55C31 /* Assets.xcassets */,
 				AF1711D52BF8EF0C00E55C31 /* WeekBeat.entitlements */,
@@ -262,7 +259,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AF1711CD2BF8EF0800E55C31 /* ContentView.swift in Sources */,
 				AF1711CF2BF8EF0800E55C31 /* Item.swift in Sources */,
 				AF1711CB2BF8EF0800E55C31 /* WeekBeatApp.swift in Sources */,
 			);
@@ -431,6 +427,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"WeekBeat/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -457,6 +454,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"WeekBeat/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSUIElement = YES;
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

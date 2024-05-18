@@ -6,27 +6,59 @@
 //
 
 import SwiftUI
-import SwiftData
 
 @main
 struct WeekBeatApp: App {
-    var sharedModelContainer: ModelContainer = {
-        let schema = Schema([
-            Item.self,
-        ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
-
-        do {
-            return try ModelContainer(for: schema, configurations: [modelConfiguration])
-        } catch {
-            fatalError("Could not create ModelContainer: \(error)")
-        }
-    }()
-
+    @AppStorage("showWeek") private var showWeek = true
+    @AppStorage("showBeat") private var showBeat = true
+    @AppStorage("short") private var short = false
+    
     var body: some Scene {
-        WindowGroup {
-            ContentView()
+        MenuBarExtra {
+            Toggle(isOn: $showWeek) {
+                Text("Week")
+            }
+            Toggle(isOn: $showBeat) {
+                Text("Beat")
+            }
+            Toggle(isOn: $short) {
+                Text("Short")
+            }
+            Divider()
+            Button("Quit") {
+                NSApplication.shared.terminate(nil)
+            }.keyboardShortcut("q")
+        } label: {
+            Text(calcLabel())
         }
-        .modelContainer(sharedModelContainer)
+    }
+    
+    func calcLabel() -> String {
+        let calendar = Calendar.current
+        let weekOfYear = calendar.component(.weekOfYear, from: Date(timeIntervalSinceNow: 0))
+        var label = ""
+        if (showWeek) {
+            label = short ? "W " : "Week "
+            label += weekOfYear.formatted()
+        }
+        if (showBeat) {
+            if (showWeek) {
+                label += " "
+            }
+            label += short ? "B " : "Beat "
+            let b = Double(weekOfYear) / 2.0
+            label += b.rounded(.toNearestOrAwayFromZero).formatted(.number)
+        }
+        if (!showWeek && !showBeat) {
+            let components = Calendar.current.dateComponents([.month, .day], from: .now)
+            let month = components.month ?? 0
+            let day = components.day ?? 0
+            if (month == 1 && day == 4) {
+                label = "🫚"
+            } else {
+                label = "❤️"
+            }
+        }
+        return label
     }
 }
